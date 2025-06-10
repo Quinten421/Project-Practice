@@ -253,10 +253,10 @@ ggplot(tmp2, aes(x=factor(Var1, levels=Var1), y=Freq, fill=FirstGen, label=Perce
 ::: row
 ::: col-md-6
 ```{r}
-tmp3 <- data.frame(firstgen=BNSp2b$firstgen) %>% 
-  mutate(firstgen=factor(ifelse(is.na(firstgen), NA, ifelse(firstgen == 0, "Not First Gen", "First Gen")), levels=c("Not First Gen", "First Gen")))
-
-plot_frq(tmp3$firstgen, geom.colors = plot_color, ylim=c(0, 400)) + xlab('') + ylab("Number of Students")
+# tmp3 <- data.frame(firstgen=BNSp2b$firstgen) %>% 
+#   mutate(firstgen=factor(ifelse(is.na(firstgen), NA, ifelse(firstgen == 0, "Not First Gen", "First Gen")), levels=c("Not First Gen", "First Gen")))
+# 
+# plot_frq(tmp3$firstgen, geom.colors = plot_color, ylim=c(0, 400)) + xlab('') + ylab("Number of Students")
 ```
 :::
 
@@ -269,3 +269,5 @@ plot_frq(tmp3$firstgen, geom.colors = plot_color, ylim=c(0, 400)) + xlab('') + y
 :::
 
 **Summary: ** A total of `r count_and_percent(BNSp2b, firstgen, '1')` students reported first-generation status. As stated above, this outcome is not surprising because students in this study were either enrolled in EOP or EOPS, and both programs recruit students with first-generation status.
+
+:D
